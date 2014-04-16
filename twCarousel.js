@@ -421,7 +421,7 @@
     };
 
     twCarousel.setCSS = function(domNode,keyValue){
-        var existant = domNode.getAttribute("style");
+        var existant = domNode.getAttribute("style",2);//2 is the Flag for IE : http://msdn.microsoft.com/en-us/library/ie/ms536429%28v=vs.85%29.aspx
         var itsanew = 0;
         var newString = "";
         var oldKey = "";
