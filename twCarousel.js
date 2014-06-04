@@ -28,6 +28,7 @@
         /**
         * Values uses in everywhere are setted here
         */
+        var pingSlide;
         var cpt = 1;
         var nbrElts = 0;
         var thumbHover = 0;
@@ -64,6 +65,7 @@
         if(params.AnimSplitdistance){originalanD = anD = params.AnimSplitdistance;}
         endOfWorld = params.endRotation;
         interactStopAll = params.interactStopAll;
+        pingSlide = params.pingSlide;
 
         nbrElts = listElt.length;
 
@@ -161,6 +163,7 @@
 
             /* = Gestion pagination ================================================================= */
             function _paginate(cpt){
+                if(pingSlide){pingSlide.call();}
                 if(pagination){
                     document.getElementById(pagination).innerHTML = cpt;
                 }
